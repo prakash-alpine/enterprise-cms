@@ -1,18 +1,22 @@
 default:
   sessions:
     default:
-      database: locomotive_dev
+      database: admin
+      username: admin
+      password: mongodb_rails
       hosts:
-        - localhost:27017
+        - 192.168.0.20:27017
   options:
     identity_map_enabled: true
 
 development:
   sessions:
     default:
-      database: locomotive_dev
+      database: admin
+      username: admin
+      password: mongodb_rails
       hosts:
-        - localhost:27017
+        - 192.168.0.20:27017
   options:
     identity_map_enabled: true
 
@@ -28,10 +32,10 @@ test:
 production:
   sessions:
     default:
-      database: locomotive_production
-      # heroku
-      # uri: <%= ENV['MONGOHQ_URL'] %>
+      database: admin
+      username: admin
+      password: mongodb_rails
       hosts:
-        - localhost:27017
+        - 192.168.0.20:27017
   options:
     identity_map_enabled: true
